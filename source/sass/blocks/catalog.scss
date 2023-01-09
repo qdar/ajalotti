@@ -1,0 +1,20 @@
+.catalog {
+  text-align: center;
+  margin-bottom: $padding-mobile;
+
+  &--accent {
+    background: $white;
+    padding: $padding-white 0;
+  }
+}
+
+.catalog__list {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 36px;
+  margin: 48px 0;
+}
+
+.catalog__link {
+  color: $bace-color;
+}

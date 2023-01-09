@@ -1,0 +1,23 @@
+.burger {
+  position: relative;
+  width: 20px;
+  height: 8px;
+}
+
+.burger::after,
+.burger::before {
+  content: '';
+  height: 1.3px;
+  width: 20px;
+  background-color: $bace-color;
+  position: absolute;
+  left: 0;
+}
+
+.burger::before {
+  top: 0;
+}
+
+.burger::after {
+  bottom: 0;
+}

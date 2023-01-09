@@ -1,0 +1,17 @@
+.image-box {
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 24px;
+  padding-top: 45px;
+
+  &::before {
+    content: '';
+    background-image: url(../img/circle2.svg);
+    width: 90px;
+    height: 92px;
+    position: absolute;
+    top: 0px;
+    right: 30px;
+  }
+}

@@ -1,0 +1,14 @@
+.slider__caption {
+  color: $accent-color;
+}
+
+.slider__label {
+  text-align: center;
+  margin-top: 8px;
+}
+
+.slider__item--center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

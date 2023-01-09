@@ -1,0 +1,13 @@
+.product-card__link {
+  color: $bace-color;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card__image {
+  margin-bottom: 8px;
+}
+
+.product-card__discount {
+  text-decoration: line-through;
+}

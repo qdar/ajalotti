@@ -1,0 +1,25 @@
+.link {
+  display: inline-grid;
+  color: $bace-color;
+
+
+  &::after {
+    content: '';
+    width: 0;
+    height: 1.3px;
+    display: block;
+    background: $bace-color;
+    transition: all 0.3s;
+  }
+
+  &:hover {
+    color: $hover-color;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+
+}
+
+

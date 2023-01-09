@@ -1,8 +1,13 @@
 .headline {
   font-size: 24px;
+  font-weight: 400;
+  line-height: 125%;
+  margin: 0;
 
   &--big {
     font-size: 64px;
+    line-height: 120%;
+    margin: 16px 0;
 
     @include laptop {
       font-size: 128px;
