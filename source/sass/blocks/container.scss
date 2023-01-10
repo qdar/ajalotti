@@ -1,3 +1,8 @@
 .container {
-  padding: 0 20px;
+  margin: 0 20px;
+
+  @include laptop {
+    margin: 0 auto;
+    width: 1320px;
+  }
 }

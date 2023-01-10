@@ -2,13 +2,20 @@
   color: $accent-color;
 }
 
-.slider__label {
-  text-align: center;
-  margin-top: 8px;
-}
-
 .slider__item--center {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  text-align: center;
+}
+
+.slider__item--end {
+  @include tablet {
+    display: flex;
+    align-items: end;
+  }
+}
+
+.slider__label {
+  text-align: center;
+  margin-top: 8px;
 }

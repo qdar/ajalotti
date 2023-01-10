@@ -1,6 +1,9 @@
 .catalog {
-  text-align: center;
   margin-bottom: $padding-mobile;
+
+  @include tablet {
+    margin-bottom: $padding-pc;
+  }
 
   &--accent {
     background: $white;
@@ -8,13 +11,30 @@
   }
 }
 
+.catalog__wrapper {
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+// .catalog__title {
+//   @include tablet {
+//     order: 2;
+//   }
+// }
+
 .catalog__list {
   display: grid;
   grid-template-columns: repeat(2,1fr);
   gap: 36px;
   margin: 48px 0;
-}
 
-.catalog__link {
-  color: $bace-color;
+  @include tablet {
+    grid-template-columns: repeat(3,1fr);
+  }
+
+  @include laptop {
+    gap: 48px;
+  }
 }

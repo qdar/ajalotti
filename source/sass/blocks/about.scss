@@ -1,3 +1,35 @@
 .about {
   margin-bottom: $padding-mobile;
+
+  @include tablet {
+    margin-bottom: $padding-pc;
+  }
+}
+
+.about__wrapper {
+  @include tablet {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    align-items: center;
+    gap: 36px;
+  }
+
+  @include laptop {
+    gap: 48px;
+  }
+}
+
+.about__image {
+  @include tablet {
+    display: flex;
+    justify-content: end;
+  }
+}
+
+.about__text {
+  @include tablet {
+    order: 1;
+    max-width: 343px;
+    padding-top: 58px;
+  }
 }

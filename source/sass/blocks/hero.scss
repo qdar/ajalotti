@@ -1,13 +1,45 @@
 .hero__slider {
   position: relative;
+
+  @include tablet {
+    display: flex;
+    gap: 36px;
+  }
+
+  @include laptop {
+    gap: 48px;
+  }
 }
 
-.hero__slider::before {
+.hero__slider .slider__item:not(.slider__item:nth-child(2)) {
+  @include mobile-only {
+    display: none;
+  }
+}
+
+.hero__circle {
+  position: relative;
+}
+
+.hero__circle::before {
   content: '';
   background-image: url(../img/circle.svg);
-  width: 90px;
-  height: 92px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 92px;
+  height: 90px;
   position: absolute;
   top: -45px;
   right: 30px;
+
+  @include tablet {
+    right: -45px;
+  }
+
+  @include laptop {
+    width: 119px;
+    height: 116px;
+    top: -58px;
+    right: -58px;
+  }
 }

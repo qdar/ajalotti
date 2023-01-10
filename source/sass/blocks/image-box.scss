@@ -5,13 +5,28 @@
   margin-top: 24px;
   padding-top: 45px;
 
+  @include tablet {
+    height: auto;
+    margin-top: 0;
+    padding-top: 58px;
+    overflow: visible;
+  }
+
   &::before {
     content: '';
     background-image: url(../img/circle2.svg);
+    background-size: cover;
     width: 90px;
     height: 92px;
     position: absolute;
     top: 0px;
     right: 30px;
+
+    @include tablet {
+      width: 119px;
+      height: 116px;
+      right: -58px;
+    }
   }
+
 }

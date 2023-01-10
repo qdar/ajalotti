@@ -1,7 +1,23 @@
-.footer-menu__item + .footer-menu__item {
-  margin-top: 16px;
+.footer-menu {
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include laptop {
+    flex-direction: row;
+  }
 }
 
-.footer-menu__link {
-  color: $bace-color;
+.footer-menu__item:last-child {
+  @include laptop {
+    margin-left: auto;
+  }
+}
+
+.footer-menu__item--copy {
+  @include laptop {
+    order: -1;
+    margin-right: auto;
+  }
 }

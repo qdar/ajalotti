@@ -17,9 +17,14 @@ body {
 
 main {
   margin-top: calc(60px + 56px);
+
+  @include laptop {
+    margin-top: calc(90px + 72px);
+  }
 }
 
 a {
+  color: $bace-color;
   text-decoration: none;
 }
 

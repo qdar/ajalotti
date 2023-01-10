@@ -12,6 +12,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include laptop {
+    height: 90px;
+  }
 }
 
 .header__menu {

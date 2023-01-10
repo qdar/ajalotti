@@ -1,4 +1,10 @@
 .advantage {
-  padding-top: $padding-mobile;
-  padding-bottom: $padding-mobile;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 600px;
+
+  @include laptop {
+    min-height: 800px;
+  }
 }
