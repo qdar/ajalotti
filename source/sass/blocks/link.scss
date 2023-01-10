@@ -9,7 +9,7 @@
     height: 1.3px;
     display: block;
     background: $bace-color;
-    transition: all 0.3s;
+    transition: $transition;
   }
 
   &:hover {

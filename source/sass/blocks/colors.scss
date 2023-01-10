@@ -1,0 +1,42 @@
+.colors {
+  display: flex;
+}
+
+.colors__item {
+  margin-right: 12px;
+}
+
+.colors__item:first-child .colors__link span {
+  display: block;
+}
+
+.colors__item:first-child .colors__link {
+  border: 1px solid #000;
+}
+
+.colors__link {
+  display: block;
+  width: 16px;
+  height: 16px;
+  position: relative;
+}
+
+.colors__link span {
+  display: none;
+  color: $bace-color;
+  position: absolute;
+  top: -30px;
+  left: 0;
+}
+
+.grafit {
+  background-color: #4B5368;
+}
+
+.black {
+  background-color: #252525;
+}
+
+.androise {
+  background-color: #96BCE8;
+}

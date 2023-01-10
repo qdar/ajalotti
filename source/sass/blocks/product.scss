@@ -1,0 +1,48 @@
+.product {
+  margin-bottom: $padding-mobile;
+}
+
+.product-page main {
+  margin-top: 60px;
+}
+
+.product + .catalog {
+  margin-bottom: 0;
+}
+
+.product__info {
+  margin-top: 48px;
+}
+
+.product__name {
+  display: flex;
+}
+
+.product__object {
+  color: $accent-color;
+  margin-left: 12px;
+}
+
+.product__price {
+  font-size: 20px;
+  margin: 0;
+  margin-top: 4px;
+}
+
+.product__color {
+  padding-top: 48px;
+  padding-bottom: 36px;
+}
+
+.product__start {
+  text-align: right;
+}
+
+.product__delivery {
+  font-size: 16px;
+}
+
+.product__tabs {
+  display: flex;
+  flex-direction: column;
+}

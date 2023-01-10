@@ -5,8 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Товар</title>
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body>
+<body class="product-page">
   <header class="header">
     <div class="header__wrapper container">
       <button class="header__burger burger" type="button"></button>
@@ -31,7 +32,7 @@
       </div>
       <a class="header__logo" href="#">Aj Alotti</a>
       <button class="header__cart" type="button">
-        <img src="#" width="24" height="24" alt="Корзина">
+        <img src="img/cart.svg" width="24" height="24" alt="Корзина">
       </button>
     </div>
   </header>
@@ -40,14 +41,16 @@
       <div class="product__wrapper container">
         <div class="product__image slider">
           <div class="slider__item">
-            <img src="#" alt="">
+            <img src="../img/P1010148.png" alt="">
           </div>
         </div>
         <div class="product__info">
-          <h1 class="product__name headline">Model 002</h1>
-          <p class="product__object headline">Сумка</p>
+          <div class="product__name">
+            <h1 class="headline">Model 002</h1>
+            <p class="product__object headline">Сумка</p>
+          </div>
           <p class="product__price">21 000 ₽</p>
-          <ul class="product__color colors">
+          <ul class="product__color clear-list colors">
             <li class="colors__item">
               <a class="colors__link grafit" href="#">
                 <span>grafit</span>
@@ -86,10 +89,10 @@
     <section class="catalog catalog--accent">
       <div class="catalog__wrapper container">
         <h2 class="catalog__title headline">Другие модели</h2>
-        <ul class="catalog__list product-card">
+        <ul class="catalog__list clear-list product-card">
           <li class="product-card__item">
             <a class="product-card__link" href="#">
-              <img class="product-card__image" width="157" height="206" src="#" alt="">
+              <img class="product-card__image" src="../img/card.jpg" alt="">
               <span class="product-card__name">Model 005</span>
               <span class="product-card__discount">49000 ₽</span>
               <span class="product-card__price">32000 ₽</span>
@@ -97,7 +100,7 @@
           </li>
           <li class="product-card__item">
             <a class="product-card__link" href="#">
-              <img class="product-card__image" width="157" height="206" src="#" alt="">
+              <img class="product-card__image" src="../img/card.jpg" alt="">
               <span class="product-card__name">Model 006</span>
               <span class="product-card__discount">49000 ₽</span>
               <span class="product-card__price">32000 ₽</span>
@@ -105,7 +108,7 @@
           </li>
           <li class="product-card__item">
             <a class="product-card__link" href="#">
-              <img class="product-card__image" width="157" height="206" src="#" alt="">
+              <img class="product-card__image" src="../img/card.jpg" alt="">
               <span class="product-card__name">Model 007</span>
               <span class="product-card__discount">49000 ₽</span>
               <span class="product-card__price">32000 ₽</span>
@@ -113,7 +116,7 @@
           </li>
           <li class="product-card__item">
             <a class="product-card__link" href="#">
-              <img class="product-card__image" width="157" height="206" src="#" alt="">
+              <img class="product-card__image" src="../img/card.jpg" alt="">
               <span class="product-card__name">Model 008</span>
               <span class="product-card__discount">49000 ₽</span>
               <span class="product-card__price">32000 ₽</span>
@@ -121,7 +124,7 @@
           </li>
           <li class="product-card__item">
             <a class="product-card__link" href="#">
-              <img class="product-card__image" width="157" height="206" src="#" alt="">
+              <img class="product-card__image" src="../img/card.jpg" alt="">
               <span class="product-card__name">Model 007</span>
               <span class="product-card__discount">49000 ₽</span>
               <span class="product-card__price">32000 ₽</span>
@@ -129,7 +132,7 @@
           </li>
           <li class="product-card__item">
             <a class="product-card__link" href="#">
-              <img class="product-card__image" width="157" height="206" src="#" alt="">
+              <img class="product-card__image" src="../img/card.jpg" alt="">
               <span class="product-card__name">Model 008</span>
               <span class="product-card__discount">49000 ₽</span>
               <span class="product-card__price">32000 ₽</span>
@@ -141,7 +144,7 @@
   </main>
   <footer class="footer">
     <div class="footer__wrapper container">
-      <ul class="footer__list footer-menu">
+      <ul class="footer__list clear-list footer-menu">
         <li class="footer-menu__item">
           <a class="footer-menu__link" href="tel:89154785491">8 (915) 478 54 91</a>
         </li>
