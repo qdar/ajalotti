@@ -22,6 +22,12 @@ $desktop-min: 1920px;
     }
 }
 
+@mixin mobile-tablet-only {
+  @media (max-width: $tablet-max) {
+      @content;
+  }
+}
+
 @mixin tablet-only {
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {
         @content;

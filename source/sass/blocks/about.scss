@@ -1,7 +1,9 @@
 .about {
+  margin-top: $padding-mobile;
   margin-bottom: $padding-mobile;
 
   @include tablet {
+    margin-top: $padding-pc;
     margin-bottom: $padding-pc;
   }
 }
@@ -11,6 +13,7 @@
     display: grid;
     grid-template-columns: 4fr 3fr;
     align-items: center;
+    justify-items: end;
     gap: 36px;
   }
 
@@ -19,17 +22,11 @@
   }
 }
 
-.about__image {
-  @include tablet {
-    display: flex;
-    justify-content: end;
-  }
-}
-
 .about__text {
   @include tablet {
     order: 1;
     max-width: 343px;
     padding-top: 58px;
+    justify-self: start;
   }
 }

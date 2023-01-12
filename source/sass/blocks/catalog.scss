@@ -15,14 +15,9 @@
   @include tablet {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 }
-
-// .catalog__title {
-//   @include tablet {
-//     order: 2;
-//   }
-// }
 
 .catalog__list {
   display: grid;
@@ -36,5 +31,6 @@
 
   @include laptop {
     gap: 48px;
+    max-width: 1125px;
   }
 }

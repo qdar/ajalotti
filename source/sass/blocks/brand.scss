@@ -1,7 +1,38 @@
-.brand {
-  margin-bottom: $padding-mobile;
+.brand__wrapper {
+  @include tablet {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    align-items: center;
+    justify-items: end;
+    gap: 36px;
+  }
+
+  @include laptop {
+    gap: 48px;
+  }
 }
 
-.brand-block {
+.brand__text {
+  @include tablet {
+    max-width: 343px;
+    justify-self: end;
+  }
+}
+
+.brand__text--inverse {
+  @include tablet {
+    order: 1;
+    padding-top: 58px;
+    justify-self: start;
+  }
+}
+
+.brand--block {
   margin-top: $padding-mobile;
+  margin-bottom: $padding-mobile;
+
+  @include laptop {
+    margin-top: $padding-pc;
+    margin-bottom: $padding-pc;
+  }
 }
