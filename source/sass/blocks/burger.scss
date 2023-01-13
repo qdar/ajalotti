@@ -1,23 +1,60 @@
 .burger {
   position: relative;
-  width: 20px;
-  height: 8px;
+  width: 24px;
+  height: 32px;
+
+  &::after,
+  &::before {
+    content: '';
+    height: 1.3px;
+    width: 20px;
+    background-color: $bace-color;
+    position: absolute;
+    left: 0;
+    transition: $transition;
+  }
+
+  &::before {
+    top: 11px;
+  }
+
+  &::after {
+    bottom: 11px;
+  }
+
+  @include laptop {
+    display: none;
+  }
+
+  &--open::after {
+    transform: rotate(-45deg);
+    top: 16px;
+  }
+
+  &--open::before {
+    transform: rotate(45deg);
+    top: 16px;
+  }
 }
 
-.burger::after,
-.burger::before {
-  content: '';
-  height: 1.3px;
-  width: 20px;
-  background-color: $bace-color;
-  position: absolute;
-  left: 0;
+.burger__panel {
+  display: none;
+
+  @include mobile-tablet-only {
+    padding: 40px 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 60px;
+  }
+
+  @include laptop {
+    display: block;
+  }
 }
 
-.burger::before {
-  top: 0;
-}
-
-.burger::after {
-  bottom: 0;
+.burger--open + .burger__panel {
+  display: block;
 }

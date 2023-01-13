@@ -1,0 +1,21 @@
+.banner__link .banner__label span {
+  display: inline-grid;
+
+  &::after {
+    content: '';
+    width: 0;
+    height: 1.3px;
+    display: block;
+    background: $bace-color;
+    transition: $transition;
+  }
+}
+
+.banner__link:hover .banner__label span::after {
+  width: 100%;
+}
+
+.banner__label {
+  text-align: center;
+  margin-top: 8px;
+}

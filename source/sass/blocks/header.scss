@@ -1,29 +1,37 @@
 .header {
   background-color: $bg-color;
+  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   z-index: 1;
 }
 
 .header__wrapper {
-  height: 60px;
+  min-height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   @include laptop {
-    height: 90px;
+    min-height: 90px;
   }
 }
 
 .header__menu {
-  display: none;
+  @include laptop {
+    width: 100%;
+    margin-right: 36px;
+  }
 }
 
 .header__logo {
   text-transform: uppercase;
   font-size: 20px;
-  color: $bace-color;
+
+  @include laptop {
+    position: absolute;
+    left: 50%;
+    transform: translate(-47px, 0);
+  }
 }

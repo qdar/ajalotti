@@ -1,0 +1,37 @@
+.main-menu__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+
+  @include laptop {
+    flex-direction: row;
+    gap: 24px;
+  }
+}
+
+.main-menu__item:nth-child(4) {
+  @include laptop {
+    margin-left: auto;
+  }
+}
+
+.main-menu__link {
+  position: relative;
+
+  &:hover .main-menu__number {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.main-menu__number {
+  font-size: 14px;
+  color: $accent-color;
+  position: absolute;
+  top: -16px;
+  right: -8px;
+  opacity: 0;
+  transform: translate(0, 5px);
+  transition: $transition;
+}

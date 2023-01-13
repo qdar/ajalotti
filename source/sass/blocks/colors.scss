@@ -1,32 +1,56 @@
 .colors {
   display: flex;
-}
-
-.colors__item {
-  margin-right: 12px;
-}
-
-.colors__item:first-child .colors__link span {
-  display: block;
-}
-
-.colors__item:first-child .colors__link {
-  border: 1px solid #000;
+  gap: 12px;
 }
 
 .colors__link {
   display: block;
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
+  margin: 0;
   position: relative;
+  border: 0.5px solid $darkgray;
+  transition: $transition;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &--current {
+    &::after {
+      content: '';
+      border: 1px solid $bace-color;
+      width: 22px;
+      height: 22px;
+      position: absolute;
+      left: -3px;
+      top: -3px;
+    }
+  }
+}
+
+.colors__link.colors__link--current span {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.colors:hover .colors__link--current span {
+  opacity: 0;
 }
 
 .colors__link span {
-  display: none;
   color: $bace-color;
   position: absolute;
   top: -30px;
   left: 0;
+  opacity: 0;
+  transform: translate(0, 5px);
+  transition: $transition;
+}
+
+.colors__link:hover span {
+  opacity: 1;
+  transform: translate(0, 0);
 }
 
 .grafit {

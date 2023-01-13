@@ -9,4 +9,8 @@
   &:hover {
     background-color: $hover-color;
   }
+
+  &:active {
+    background-color: $active-color;
+  }
 }

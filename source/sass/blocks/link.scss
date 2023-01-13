@@ -2,7 +2,6 @@
   display: inline-grid;
   color: $bace-color;
 
-
   &::after {
     content: '';
     width: 0;
@@ -18,6 +17,14 @@
 
   &:hover::after {
     width: 100%;
+  }
+
+  &:active {
+    color: $active-color;
+  }
+
+  &:active::after {
+    width: 80%;
   }
 
 }

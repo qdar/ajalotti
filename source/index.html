@@ -11,25 +11,31 @@
   <header class="header">
     <div class="header__wrapper container">
       <button class="header__burger burger" type="button"></button>
-      <div class="header__menu main-menu">
-        <ul class="main-menu__list">
+      <nav class="header__menu burger__panel main-menu">
+        <ul class="main-menu__list clear-list">
           <li class="main-menu__item">
-            <a class="main-menu__link" href="#">Cумки</a>
+            <a class="main-menu__link main-menu__link--count link" href="#">
+              Cумки
+              <span class="main-menu__number">6</span>
+            </a>
           </li>
           <li class="main-menu__item">
-            <a class="main-menu__link" href="#">Аксессуары</a>
+            <a class="main-menu__link main-menu__link--count link" href="#">
+              Аксессуары
+              <span class="main-menu__number">7</span>
+            </a>
           </li>
           <li class="main-menu__item">
-            <a class="main-menu__link" href="#">Философия</a>
+            <a class="main-menu__link link" href="#">Философия</a>
           </li>
           <li class="main-menu__item">
-            <a class="main-menu__link" href="#">Ателье</a>
+            <a class="main-menu__link link" href="#">Ателье</a>
           </li>
           <li class="main-menu__item">
-            <a class="main-menu__link" href="#">Контакты</a>
+            <a class="main-menu__link link" href="#">Контакты</a>
           </li>
         </ul>
-      </div>
+      </nav>
       <a class="header__logo" href="#">Aj Alotti</a>
       <button class="header__cart" type="button">
         <img src="img/cart.svg" width="24" height="24" alt="Корзина">
@@ -42,21 +48,27 @@
     <section class="hero">
       <h2 class="visually-hidden">Новинки в aj alotti</h2>
       <div class="hero__wrapper container">
-        <ul class="hero__slider clear-list slider">
-          <li class="slider__item">
+        <ul class="hero__slider clear-list slider banner">
+          <li class="slider__item banner__item">
             <img class="slider__image" src="img/hero-one.jpg" alt="">
-            <p class="slider__label">До 10 января — 40%</p>
+            <p class="banner__label">
+              <span>До 10 января — 40%</span>
+            </p>
           </li>
-          <li class="slider__item hero__circle">
-            <a class="slider__link" href="#">
+          <li class="slider__item banner__item hero__circle">
+            <a class="slider__link banner__link" href="#">
               <img class="slider__image" src="img/hero-two.jpg" alt="">
-              <p class="slider__label">Model 008</p>
+              <p class="banner__label">
+                <span>Model 008</span>
+              </p>
             </a>
           </li>
-          <li class="slider__item slider__item--end">
-            <a class="slider__link" href="#">
+          <li class="slider__item banner__item slider__item--end">
+            <a class="slider__link banner__link" href="#">
               <img class="slider__image" src="img/hero-three.jpg" alt="">
-              <p class="slider__label">New! Model 007</p>
+              <p class="banner__label">
+                <span>New! Model 007</span>
+              </p>
             </a>
           </li>
         </ul>
