@@ -1,23 +1,19 @@
 .image-box {
-  height: 250px;
-  overflow: hidden;
   position: relative;
   margin-top: 24px;
   padding-top: 45px;
 
   @include tablet {
-    height: auto;
     margin-top: 0;
     padding-top: 58px;
-    overflow: visible;
   }
 
   &::before {
     content: '';
     background-image: url(../img/circle2.svg);
     background-size: cover;
-    width: 90px;
-    height: 92px;
+    width: 92px;
+    height: 90px;
     position: absolute;
     top: 0px;
     right: 30px;
@@ -29,4 +25,9 @@
     }
   }
 
+}
+
+.image-box__image {
+  width: 100%;
+  height: auto;
 }

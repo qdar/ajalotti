@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AJ Alotti — Сумки и аксессуары из кожи</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 <body>
   <header class="header">
@@ -53,14 +57,20 @@
       <div class="hero__wrapper container">
         <ul class="hero__slider clear-list slider banner">
           <li class="slider__item banner__item">
-            <img class="slider__image" src="img/hero-one.jpg" alt="">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/banner01.jpg 1x, img/banner01@2x.jpg 2x">
+              <img class="slider__image" src="img/banner01.jpg" width="343" alt="">
+            </picture>
             <p class="banner__label">
               <span>До 10 января — 40%</span>
             </p>
           </li>
           <li class="slider__item banner__item hero__circle">
             <a class="slider__link banner__link" href="#">
-              <img class="slider__image" src="img/hero-two.jpg" alt="">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/banner02.jpg 1x, img/banner02@2x.jpg 2x">
+                <img class="slider__image" src="img/banner02.jpg" width="538" alt="">
+              </picture>
               <p class="banner__label">
                 <span>Model 008</span>
               </p>
@@ -68,7 +78,10 @@
           </li>
           <li class="slider__item banner__item slider__item--end">
             <a class="slider__link banner__link" href="#">
-              <img class="slider__image" src="img/hero-three.jpg" alt="">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/banner03.jpg 1x, img/banner03@2x.jpg 2x">
+                <img class="slider__image" src="img/banner03.jpg" width="343" alt="">
+              </picture>
               <p class="banner__label">
                 <span>New! Model 007</span>
               </p>
@@ -230,8 +243,11 @@
           <p>Quality matters. Gender does not.</p>
           <a class="about__link link" href="#">О нашем бренде</a>
         </div>
-        <div class="about__image image-box">
-          <img src="../img/main-about.jpg" alt="">
+        <div class="image-box">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/main-about.jpg 1x, img/main-about@2x.jpg 2x">
+            <img class="image-box__image" src="img/main-about-mobile.jpg"  width="539" height="539" srcset="img/main-about-mobile@2x.jpg 2x" alt="О нашем бренде.">
+          </picture>
         </div>
       </div>
     </section>
