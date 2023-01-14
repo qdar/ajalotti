@@ -18,6 +18,7 @@
 
 .main-menu__link {
   position: relative;
+  padding: 5px 0;
 
   &:hover .main-menu__number {
     opacity: 1;
@@ -29,7 +30,7 @@
   font-size: 14px;
   color: $accent-color;
   position: absolute;
-  top: -16px;
+  top: -12px;
   right: -8px;
   opacity: 0;
   transform: translate(0, 5px);

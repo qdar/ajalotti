@@ -1,6 +1,9 @@
 .tab__button {
-  text-align-last: left;
+  text-align: left;
   font-size: 20px;
+  background-image: url(../img/plus.svg);
+  background-repeat: no-repeat;
+  background-position: right center;
 }
 
 .tab__button:first-child {
