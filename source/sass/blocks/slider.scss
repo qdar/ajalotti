@@ -5,12 +5,12 @@
 .slider__item--center {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  align-items: center;
 }
 
 .slider__item--end {
   @include tablet {
     display: flex;
-    align-items: end;
+    align-items: flex-end;
   }
 }
