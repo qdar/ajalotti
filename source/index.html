@@ -9,7 +9,8 @@
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/apple.png">
-  <!-- <link rel="manifest" href="/manifest.webmanifest"> -->
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="/fonts/noah-regular.woff2" as="font">
 </head>
 <body>
   <header class="header">
@@ -245,8 +246,11 @@
         </div>
         <div class="image-box">
           <picture>
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/main-about.webp 1x, img/main-about@2x.webp 2x">
+            <source type="image/webp" srcset="img/main-about-mobile.webp 1x, img/main-about-mobile@2x.webp 2x">
+
             <source media="(min-width: 1200px)" srcset="img/main-about.jpg 1x, img/main-about@2x.jpg 2x">
-            <img class="image-box__image" src="img/main-about-mobile.jpg"  width="539" height="539" srcset="img/main-about-mobile@2x.jpg 2x" alt="О нашем бренде.">
+            <img class="image-box__image" src="img/main-about-mobile.jpg"  width="539" height="539" srcset="img/main-about-mobile@2x.jpg 2x" loading="lazy" alt="О нашем бренде.">
           </picture>
         </div>
       </div>
