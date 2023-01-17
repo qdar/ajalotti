@@ -32,6 +32,10 @@
   gap: 24px;
   padding-bottom: 36px;
   border-bottom: 1px solid $gray;
+
+  @include laptop {
+    grid-template-columns: 116px 1fr 16px;
+  }
 }
 
 .cart__item + .cart__item {
@@ -41,10 +45,32 @@
 .cart__product {
   display: flex;
   flex-direction: column;
+
+  @include laptop {
+    flex-direction: row;
+    gap: 24px;
+  }
+}
+
+.cart__header ul {
+  display: none;
+
+  @include laptop {
+    display: grid;
+    grid-template-columns: 220px 70px 0px;
+    gap: 24px;
+    padding-bottom: 8px;
+    margin-bottom: 36px;
+    border-bottom: 1px solid $gray;
+  }
 }
 
 .cart__color {
   color: $accent-color;
+
+  @include laptop {
+    min-width: 70px;
+  }
 }
 
 .cart__delete {
