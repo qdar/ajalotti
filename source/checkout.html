@@ -4,78 +4,125 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Покупателям</title>
+  <title>Оформить заказ</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="/fonts/noah-regular.woff2" as="font">
 </head>
 <body>
   <header class="header">
     <div class="header__wrapper container">
       <button class="header__burger burger" type="button"></button>
-      <div class="header__menu main-menu">
-        <ul class="main-menu__list">
+      <nav class="header__menu burger__panel main-menu">
+        <ul class="main-menu__list clear-list">
           <li class="main-menu__item">
-            <a class="main-menu__link" href="#">Cумки</a>
+            <a class="main-menu__link main-menu__link--count link" href="#">
+              Cумки
+              <span class="main-menu__number">6</span>
+            </a>
           </li>
           <li class="main-menu__item">
-            <a class="main-menu__link" href="#">Аксессуары</a>
+            <a class="main-menu__link main-menu__link--count link" href="#">
+              Аксессуары
+              <span class="main-menu__number">7</span>
+            </a>
           </li>
           <li class="main-menu__item">
-            <a class="main-menu__link" href="#">Философия</a>
+            <a class="main-menu__link link" href="#">Философия</a>
           </li>
           <li class="main-menu__item">
-            <a class="main-menu__link" href="#">Ателье</a>
+            <a class="main-menu__link link" href="#">Ателье</a>
           </li>
           <li class="main-menu__item">
-            <a class="main-menu__link" href="#">Контакты</a>
+            <a class="main-menu__link link" href="#">Контакты</a>
           </li>
         </ul>
-      </div>
-      <a class="header__logo" href="#">Aj Alotti</a>
+      </nav>
+      <a class="header__logo header__logo--start" href="#">
+        Aj Alotti
+        <span class="header__label">Сумки и аксессуары из кожи</span>
+      </a>
       <button class="header__cart" type="button">
-        <img src="#" width="24" height="24" alt="Корзина">
+        <img src="img/cart.svg" width="24" height="24" alt="Корзина">
       </button>
     </div>
   </header>
+
   <main>
-    <h1 class="headline">Оформление заказа</h1>
-    <section class="cart">
-      <h2 class="visually-hidden">Корзина</h2>
-      <div class="cart__wrapper container"></div>
-    </section>
-    <section class="ordering">
-      <h2 class="visually-hidden">Данные заказа</h2>
-      <div class="ordering__wrapper container">
-        <form class="ordering__form" action="#">
-          <input class="ordering__field input" type="text" name="name" id="name" placeholder="Фио">
-          <input class="ordering__field input" type="text" name="city" id="city" placeholder="Город">
-          <input class="ordering__field input" type="text" name="addres" id="addres" placeholder="Адресс">
-          <input class="ordering__field input" type="tel" name="tel" id="tel" placeholder="Телефон">
-          <input class="ordering__field input" type="email" name="email" id="email" placeholder="E-mail">
-          <textarea name="message" id="message" cols="30" rows="10" placeholder="Комментарий"></textarea>
-          <button class="button" type="button">Оформить заказ</button>
-        </form>
+    <header class="checkout-header">
+      <div class="container">
+        <h1 class="headline">Оформление заказа</h1>
+      </div>
+    </header>
+    <section class="checkout">
+      <div class="checkout__wrapper">
+        <article class="cart">
+          <div class="cart__wrapper">
+            <h2 class="visually-hidden">Корзина</h2>
+            <ul class="cart__list clear-list">
+              <li class="cart__item">
+                <img src="../img/cart-1.jpg" width="100" height="100" srcset="img/cart-1@2x.jpg 2x" loading="lazy" alt="">
+                <div class="cart__product">
+                  <span class="cart__name">Model 002</span>
+                  <span class="cart__color">androise</span>
+                  <span class="cart__price">34 300 ₽</span>
+                </div>
+                <button class="cart__delete" data-onclick="removeProduct" data-product-key="16" data-toggle="tooltip" type="button" data-original-title="" title=""></button>
+              </li>
+              <li class="cart__item">
+                <img src="../img/cart-2.jpg" width="100" height="100" srcset="img/cart-2@2x.jpg 2x" loading="lazy" alt="">
+                <div class="cart__product">
+                  <span class="cart__name">Model 004</span>
+                  <span class="cart__color">black</span>
+                  <span class="cart__price">34 300 ₽</span>
+                </div>
+                <button class="cart__delete" data-onclick="removeProduct" data-product-key="16" data-toggle="tooltip" type="button" data-original-title="" title=""></button>
+              </li>
+            </ul>
+            <p class="cart__total">Итого: 66 900 ₽</p>
+          </div>
+        </article>
+        <article class="ordering">
+          <div class="ordering__wrapper">
+            <h2 class="visually-hidden">Данные заказа</h2>
+            <form class="ordering__form" action="#">
+              <input class="ordering__field input" type="text" name="name" id="name" placeholder="Фио">
+              <input class="ordering__field input" type="text" name="city" id="city" placeholder="Город">
+              <input class="ordering__field input" type="text" name="addres" id="addres" placeholder="Адресс">
+              <input class="ordering__field input" type="tel" name="tel" id="tel" placeholder="Телефон">
+              <input class="ordering__field input" type="email" name="email" id="email" placeholder="E-mail">
+              <textarea class="ordering__textarea input" name="message" id="message" cols="30" rows="10" placeholder="Комментарий"></textarea>
+              <button class="ordering__button button" type="button">Оформить заказ</button>
+            </form>
+          </div>
+        </article>
       </div>
     </section>
   </main>
+
   <footer class="footer">
-    <div class="footer__wrapper container">
-      <ul class="footer__list footer-menu">
+    <div class="footer__wrapper">
+      <ul class="footer__list footer-menu clear-list">
         <li class="footer-menu__item">
-          <a class="footer-menu__link" href="tel:89154785491">8 (915) 478 54 91</a>
+          <a class="footer-menu__link link" href="tel:89154785491">8 (915) 478 54 91</a>
         </li>
         <li class="footer-menu__item">
-          <a class="footer-menu__link" href="mailto:alottibrand@mail.ru">alottibrand@mail.ru</a>
+          <a class="footer-menu__link link" href="mailto:alottibrand@mail.ru">alottibrand@mail.ru</a>
         </li>
         <li class="footer-menu__item">
           <span>10:00 — 21:00</span>
         </li>
         <li class="footer-menu__item">
-          <a class="footer-menu__link" href="#">Покупателям</a>
+          <a class="footer-menu__link link" href="#">Покупателям</a>
         </li>
-        <li class="footer-menu__item">
+        <li class="footer-menu__item footer-menu__item--copy">
           <span>2022 © AJ ALOTTI</span>
         </li>
         <li class="footer-menu__item">
-          <a class="footer-menu__link" href="#">in Qdar.design</a>
+          <a class="footer-menu__link link" href="#">in Qdar.design</a>
         </li>
       </ul>
     </div>

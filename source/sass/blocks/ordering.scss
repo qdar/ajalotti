@@ -1,0 +1,62 @@
+.ordering__wrapper {
+  margin: 0 20px;
+
+  @include laptop {
+    margin: 0;
+  }
+}
+
+.ordering__form {
+  display: grid;
+  gap: 24px;
+
+  @include laptop {
+    grid-template-columns: 2fr 2fr;
+    gap: 36px 48px;
+  }
+}
+
+.ordering__textarea {
+  height: 120px;
+
+  @include laptop {
+    grid-area: 3 / 2 / 5 / 2;
+  }
+}
+
+.ordering__button {
+  margin-top: 24px;
+
+  @include laptop {
+    margin: 0;
+  }
+}
+
+.checkout {
+  margin-bottom: $padding-mobile;
+
+  @include laptop {
+    margin-bottom: $padding-pc;
+  }
+}
+
+.checkout__wrapper {
+  @include tablet {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+  }
+
+  @include laptop {
+    margin: 0 auto;
+    max-width: 1320px;
+    padding: 0 5px;
+    grid-template-columns: 4fr 3fr;
+    gap: 48px;
+  }
+}
+
+.checkout-header {
+  @include tablet {
+    margin-bottom: $padding-mobile;
+  }
+}
