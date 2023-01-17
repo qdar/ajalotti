@@ -1,0 +1,53 @@
+.service__wrapper {
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    gap: 36px;
+  }
+
+  @include laptop {
+    grid-template-columns: 5fr 2fr;
+    gap: 48px;
+  }
+}
+
+.service__list {
+  counter-reset: section;
+
+  @include tablet {
+    max-width: 343px;
+    justify-self: flex-end;
+  }
+
+  @include laptop {
+    max-width: 520px;
+  }
+
+}
+
+.service__item {
+  margin-bottom: $padding-mobile;
+  position: relative;
+
+  &::before {
+    display: block;
+    counter-increment: section;
+    content: counter(section, decimal-leading-zero);
+    color: $darkgray;
+    font-size: 24px;
+    margin-bottom: 24px;
+
+    @include laptop {
+      position: absolute;
+      left: -174px;
+      top: 2px;
+    }
+  }
+}
+
+.service__list-inner {
+  list-style-type: disc;
+  display: grid;
+  gap: 8px;
+}

@@ -15,7 +15,7 @@
 .brand__text {
   @include tablet {
     max-width: 343px;
-    justify-self: end;
+    justify-self: flex-end;
   }
 }
 
@@ -27,7 +27,7 @@
   }
 }
 
-.brand--block {
+.brand--full-width {
   margin-top: $padding-mobile;
   margin-bottom: $padding-mobile;
 

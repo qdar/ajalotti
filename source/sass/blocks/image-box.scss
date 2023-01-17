@@ -18,10 +18,24 @@
     top: 0px;
     right: 30px;
 
-    @include tablet {
+    @include laptop {
       width: 119px;
       height: 116px;
       right: -58px;
+    }
+  }
+
+  &--left {
+    @include laptop {
+      padding-top: 0;
+    }
+  }
+
+  &--left::before {
+    @include laptop {
+      right: auto;
+      left: -58px;
+      top: -58px;
     }
   }
 

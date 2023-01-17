@@ -1,0 +1,42 @@
+.contacts {
+  margin-bottom: $padding-mobile;
+
+  @include laptop {
+    margin-bottom: $padding-pc;
+  }
+}
+
+.contacts__wrapper {
+  @include tablet {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    align-items: flex-start;
+    gap: 36px;
+  }
+
+  @include laptop {
+    gap: 48px;
+    grid-template-columns: 4fr 2.5fr 0.5fr;
+  }
+}
+
+.contacts__content {
+  @include tablet {
+    max-width: 343px;
+    justify-self: flex-end;
+  }
+}
+
+.contacts-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 24px;
+
+  @include laptop {
+    margin-top: 36px;
+  }
+}
+
+.contacts__links {
+  margin-bottom: $padding-mobile;
+}

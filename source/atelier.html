@@ -5,33 +5,48 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ателье</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="/fonts/noah-regular.woff2" as="font">
 </head>
 <body>
   <header class="header">
     <div class="header__wrapper container">
       <button class="header__burger burger" type="button"></button>
-      <div class="header__menu main-menu">
-        <ul class="main-menu__list">
+      <nav class="header__menu burger__panel main-menu">
+        <ul class="main-menu__list clear-list">
           <li class="main-menu__item">
-            <a class="main-menu__link" href="#">Cумки</a>
+            <a class="main-menu__link main-menu__link--count link" href="#">
+              Cумки
+              <span class="main-menu__number">6</span>
+            </a>
           </li>
           <li class="main-menu__item">
-            <a class="main-menu__link" href="#">Аксессуары</a>
+            <a class="main-menu__link main-menu__link--count link" href="#">
+              Аксессуары
+              <span class="main-menu__number">7</span>
+            </a>
           </li>
           <li class="main-menu__item">
-            <a class="main-menu__link" href="#">Философия</a>
+            <a class="main-menu__link link" href="#">Философия</a>
           </li>
           <li class="main-menu__item">
-            <a class="main-menu__link" href="#">Ателье</a>
+            <a class="main-menu__link link" href="#">Ателье</a>
           </li>
           <li class="main-menu__item">
-            <a class="main-menu__link" href="#">Контакты</a>
+            <a class="main-menu__link link" href="#">Контакты</a>
           </li>
         </ul>
-      </div>
-      <a class="header__logo" href="#">Aj Alotti</a>
+      </nav>
+      <a class="header__logo header__logo--start" href="#">
+        Aj Alotti
+        <span class="header__label">Сумки и аксессуары из кожи</span>
+      </a>
       <button class="header__cart" type="button">
-        <img src="#" width="24" height="24" alt="Корзина">
+        <img src="img/cart.svg" width="24" height="24" alt="Корзина">
       </button>
     </div>
   </header>
@@ -39,59 +54,94 @@
   <main>
     <section class="atelier">
       <div class="atelier__wrapper container">
-        <h1 class="page__heading headline">AJ ALOTTI atelier</h1>
-        <p>Локальное московское ателье с производством аксессуаров из кожи.</p>
-        <p>Принимает заказы от единичных до оптовых, так же мы разрабатываем заказы по индивидуальному дизайну.</p>
-        <p>Наша команда — это мастера дизайнер и технологи. Люди, любящие и грамотно выполняющие свою работу.</p>
-        <p>Сотрудничество: бренд AJ ALOTTI, Kauffman concept, Akhmadullina dreams, Madame Chatelet, Sasha Berg, Elmira Sarabi, SRB.</p>
-        <video class="page__video" src="#"></video>
-        <p>AJ ALOTTI atelier предоставляет следующие услуги:</p>
-        <ul class="page__list">
-          <li>Разработка моделей по индивидуальному заказу (от эскиза до готовой работы)</li>
-          <li>Создание текущих моделей по индивидуальному заказу цвета из каталога</li>
-          <li>Выездное обслуживание для vip клиентов</li>
-        </ul>
-        <p>Разработка заказов производится под руководством дизайнеров бренда.</p>
-        <img class="page__image" src="#" alt="">
-        <p>Предлагаемое сырье категории premium от итальянских фабрик: Mastrotto, Miura, Ecopelli, Petrocchi</p>
-        <p>Перечень производства:</p>
-        <ul class="page__list">
-          <li>Оптовое производство мелкой и крупной галантереи</li>
-          <li>азработка моделей по индивидуальному заказу (от эскиза до готовой работы): создание эскиза</li>
-          <li>Создание текущих моделей по индивидуальному заказу цвета из каталога</li>
-          <li>Выездное обслуживание для vip клиентов Разработка заказов производится под руководством дизайнера команды.</li>
-        </ul>
+        <div class="atelier__text">
+          <h1 class="headline">AJ ALOTTI atelier</h1>
+          <p>Локальное московское ателье с производством аксессуаров из кожи.</p>
+          <p>Принимает заказы от единичных до оптовых, так же мы разрабатываем заказы по индивидуальному дизайну.</p>
+          <p>Наша команда — это мастера дизайнер и технологи. Люди, любящие и грамотно выполняющие свою работу.</p>
+          <p>Сотрудничество: бренд AJ ALOTTI, Kauffman concept, Akhmadullina dreams, Madame Chatelet, Sasha Berg, Elmira Sarabi, SRB.</p>
+        </div>
+      </div>
+    </section>
+    <section class="atelier atelier--full-width">
+      <div class="atelier__media container">
+        <video class="atelier__video" src="img/001.mp4" autoplay="autoplay" loop="loop" playsinline="playsinline" muted="muted"></video>
+        <picture>
+          <source type="image/webp" srcset="img/atelier.webp 1x, img/atelier@2x.webp 2x">
+          <img class="atelier__image" src="img/atelier.jpg"  width="538" height="410" srcset="img/atelier@2x.jpg 2x" loading="lazy" alt="Персонализация изделия.">
+        </picture>
+      </div>
+    </section>
+    <section class="atelier">
+      <div class="atelier__wrapper container">
+        <div class="atelier__text atelier__text--big">
+          <p>AJ ALOTTI atelier предоставляет следующие услуги:</p>
+          <ul class="atelier__list">
+            <li>Разработка моделей по индивидуальному заказу (от эскиза до готовой работы)</li>
+            <li>Создание текущих моделей по индивидуальному заказу цвета из каталога</li>
+            <li>Выездное обслуживание для vip клиентов</li>
+          </ul>
+          <p>Разработка заказов производится под руководством дизайнеров бренда.</p>
+          <picture>
+            <source type="image/webp" srcset="img/atelier.webp 1x, img/atelier@2x.webp 2x">
+            <img class="atelier__image-mobile" src="img/atelier.jpg"  width="538" height="410" srcset="img/atelier@2x.jpg 2x" loading="lazy" alt="Персонализация изделия.">
+          </picture>
+          <p class="atelier__block">Предлагаемое сырье категории premium от итальянских фабрик: Mastrotto, Miura, Ecopelli, Petrocchi</p>
+          <p>Перечень производства:</p>
+          <ul class="atelier__list">
+            <li>Оптовое производство мелкой и крупной галантереи</li>
+            <li>азработка моделей по индивидуальному заказу (от эскиза до готовой работы): создание эскиза</li>
+            <li>Создание текущих моделей по индивидуальному заказу цвета из каталога</li>
+            <li>Выездное обслуживание для vip клиентов Разработка заказов производится под руководством дизайнера команды.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="atelier atelier--full-width">
+      <div class="container">
         <p class="headline headline--big">Кто хочет, тот и носит.</p>
-        <h2 class="headline">Персонализация изделия</h2>
-        <p>Индивидуальная услуга "Персонализация изделия". На любое изделие наносятся ваши инициалы. Стоимость 1000 руб.</p>
-        <p>Исходя из ваших пожеланий, можно подобрать цвет для любой модели коллекции индивидуально.</p>
-        <div class="page__image image-box">
-          <img src="#" alt="">
+      </div>
+    </section>
+    <section class="atelier atelier--last">
+      <div class="atelier__wrapper container">
+        <div class="atelier__text atelier__text--inverse">
+          <h2 class="headline">Персонализация изделия</h2>
+          <p>Индивидуальная услуга «Персонализация изделия». На любое изделие наносятся ваши инициалы. Стоимость 1000 руб.</p>
+          <p>Исходя из ваших пожеланий, можно подобрать цвет для любой модели коллекции индивидуально.</p>
+        </div>
+        <div class="image-box">
+          <picture>
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/person.webp 1x, img/person@2x.webp 2x">
+            <source type="image/webp" srcset="img/person-mobile.webp 1x, img/person-mobile@2x.webp 2x">
+
+            <source media="(min-width: 1200px)" srcset="img/person.jpg 1x, img/person@2x.jpg 2x">
+            <img class="image-box__image" src="img/person-mobile.jpg"  width="539" height="539" srcset="img/person-mobile@2x.jpg 2x" loading="lazy" alt="Персонализация изделия.">
+          </picture>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="footer__wrapper container">
-      <ul class="footer__list footer-menu">
+    <div class="footer__wrapper">
+      <ul class="footer__list footer-menu clear-list">
         <li class="footer-menu__item">
-          <a class="footer-menu__link" href="tel:89154785491">8 (915) 478 54 91</a>
+          <a class="footer-menu__link link" href="tel:89154785491">8 (915) 478 54 91</a>
         </li>
         <li class="footer-menu__item">
-          <a class="footer-menu__link" href="mailto:alottibrand@mail.ru">alottibrand@mail.ru</a>
+          <a class="footer-menu__link link" href="mailto:alottibrand@mail.ru">alottibrand@mail.ru</a>
         </li>
         <li class="footer-menu__item">
           <span>10:00 — 21:00</span>
         </li>
         <li class="footer-menu__item">
-          <a class="footer-menu__link" href="#">Покупателям</a>
+          <a class="footer-menu__link link" href="#">Покупателям</a>
         </li>
-        <li class="footer-menu__item">
+        <li class="footer-menu__item footer-menu__item--copy">
           <span>2022 © AJ ALOTTI</span>
         </li>
         <li class="footer-menu__item">
-          <a class="footer-menu__link" href="#">in Qdar.design</a>
+          <a class="footer-menu__link link" href="#">in Qdar.design</a>
         </li>
       </ul>
     </div>

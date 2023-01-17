@@ -1,0 +1,99 @@
+.atelier__wrapper {
+  @include tablet {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    align-items: center;
+    justify-items: end;
+    gap: 36px;
+  }
+
+  @include laptop {
+    gap: 48px;
+  }
+}
+
+.atelier--full-width {
+  margin-top: $padding-mobile;
+  margin-bottom: $padding-mobile;
+
+  @include laptop {
+    margin-top: $padding-pc;
+    margin-bottom: $padding-pc;
+  }
+}
+
+.atelier--last {
+  margin-bottom: $padding-mobile;
+
+  @include laptop {
+    margin-bottom: $padding-pc;
+  }
+}
+
+.atelier__text {
+  @include tablet {
+    max-width: 343px;
+    justify-self: flex-end;
+  }
+
+  &--inverse {
+    @include tablet {
+      order: 1;
+      padding-top: 58px;
+      justify-self: start;
+    }
+  }
+
+  &--big {
+    @include laptop {
+      max-width: 538px;
+    }
+  }
+}
+
+.atelier__media {
+  @include mobile-only {
+    margin: 0;
+  }
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    align-items: center;
+    gap: 36px;
+  }
+
+  @include laptop {
+    gap: 48px;
+  }
+}
+
+.atelier__video {
+  width: 100%;
+}
+
+.atelier__image {
+  @include mobile-only {
+    display: none;
+  }
+}
+
+.atelier__image-mobile {
+  margin-top: $padding-mobile;
+  margin-bottom: $padding-mobile;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.atelier__list {
+  display: grid;
+  gap: 8px;
+}
+
+.atelier__block {
+  @include tablet {
+    padding-top: 48px;
+  }
+}
