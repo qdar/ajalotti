@@ -41,7 +41,7 @@ h1.headline + p, h2.headline + p {
 }
 
 p:not(:last-child) {
-  margin-top: 16px;
+  margin-top: 0;
   margin-bottom: 16px;
 }
 

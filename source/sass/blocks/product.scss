@@ -1,5 +1,9 @@
 .product-page {
   margin-top: 60px;
+
+  @include laptop {
+    margin-top: calc(90px + 72px);
+  }
 }
 
 .product + .catalog {
@@ -38,11 +42,13 @@
 
   @include laptop {
     max-width: 343px;
+    margin-top: 0;
   }
 }
 
 .product__name {
   display: flex;
+  margin-bottom: 4px;
 }
 
 .product__object {
@@ -63,9 +69,12 @@
   margin-bottom: 24px;
 }
 
+.product__button {
+  margin-bottom: 36px;
+}
+
 .product__start {
   font-size: 16px;
-  margin-top: 36px;
   padding-left: 24px;
   background-image: url(../img/info.svg);
   background-repeat: no-repeat;
@@ -75,11 +84,11 @@
 
 .product__delivery {
   font-size: 16px;
-  margin-top: 24px;
-  margin-bottom: 48px;
 }
 
 .product__tabs {
   display: flex;
   flex-direction: column;
+  gap: 12px;
+  margin-top: 48px;
 }
