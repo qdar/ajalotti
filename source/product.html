@@ -46,6 +46,7 @@
         <div class="product__image slider">
           <div class="slider__item">
             <img src="../img/P1010148.png" alt="">
+            <img src="../img/P1010148.png" alt="">
           </div>
         </div>
         <div class="product__info">
@@ -239,6 +240,16 @@
     </div>
   </footer>
 
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/sticky-sidebar.js"></script>
   <script src="js/script.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.product__info')
+      .theiaStickySidebar({
+        additionalMarginTop: 122
+      });
+    });
+  </script>
 </body>
 </html>
