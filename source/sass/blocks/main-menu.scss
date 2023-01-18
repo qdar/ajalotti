@@ -20,19 +20,20 @@
   position: relative;
   padding: 5px 0;
 
-  &:hover .main-menu__number {
+  &--count::before {
+    content: attr(data-count);
+    font-size: 14px;
+    color: $accent-color;
+    position: absolute;
+    top: -12px;
+    right: -8px;
+    opacity: 0;
+    transform: translate(0, 5px);
+    transition: $transition;
+  }
+
+  &--count:hover::before {
     opacity: 1;
     transform: translate(0, 0);
   }
-}
-
-.main-menu__number {
-  font-size: 14px;
-  color: $accent-color;
-  position: absolute;
-  top: -12px;
-  right: -8px;
-  opacity: 0;
-  transform: translate(0, 5px);
-  transition: $transition;
 }
