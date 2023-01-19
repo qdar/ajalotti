@@ -5,7 +5,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Философия бренда</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="/fonts/noah-regular.woff2" as="font" crossorigin="anonymous">
 </head>
 <body>
   <header class="header">
@@ -30,11 +36,11 @@
           </li>
         </ul>
       </nav>
-      <a class="header__logo header__logo--start" href="/">
+      <a class="header__logo" href="/">
         Aj Alotti
-        <span class="header__label">Сумки и аксессуары из кожи</span>
+        <span class="header__label header__label--open">Сумки и аксессуары из кожи</span>
       </a>
-      <button class="header__cart" type="button">
+      <button class="header__cart" type="button" onclick="window.location.href='/checkout.html'">
         <img src="img/cart.svg" width="24" height="24" alt="Корзина">
       </button>
     </div>
@@ -52,20 +58,35 @@
       </div>
     </section>
     <section class="brand brand--full-width">
-      <ul class="image-slider clear-list">
-        <li class="image-slider__item">
-          <img src="#" alt="">
-        </li>
-        <li class="image-slider__item">
-          <img src="#" alt="">
-        </li>
-        <li class="image-slider__item">
-          <img src="#" alt="">
-        </li>
-        <li class="image-slider__item">
-          <img src="#" alt="">
-        </li>
-      </ul>
+      <div class="image-slider swiper">
+        <ul class="image-slider-list clear-list swiper-wrapper">
+          <li class="image-slider__item swiper-slide">
+            <picture>
+              <source type="image/webp" srcset="img/slide-01.webp 1x, img/slide-01@2x.webp 2x">
+              <img src="img/slide-01.jpg"  width="440" height="586" srcset="img/slide-01@2x.jpg 2x" loading="lazy" alt="Наши изделия.">
+            </picture>
+          </li>
+          <li class="image-slider__item swiper-slide">
+            <picture>
+              <source type="image/webp" srcset="img/slide-02.webp 1x, img/slide-02@2x.webp 2x">
+              <img src="img/slide-02.jpg"  width="440" height="586" srcset="img/slide-02@2x.jpg 2x" loading="lazy" alt="Наши изделия.">
+            </picture>
+          </li>
+          <li class="image-slider__item swiper-slide">
+            <picture>
+              <source type="image/webp" srcset="img/slide-04.webp 1x, img/slide-04@2x.webp 2x">
+              <img src="img/slide-04.jpg"  width="440" height="586" srcset="img/slide-04@2x.jpg 2x" loading="lazy" alt="Наши изделия.">
+            </picture>
+          </li>
+          <li class="image-slider__item swiper-slide">
+            <picture>
+              <source type="image/webp" srcset="img/slide-03.webp 1x, img/slide-03@2x.webp 2x">
+              <img src="img/slide-03.jpg"  width="440" height="586" srcset="img/slide-03@2x.jpg 2x" loading="lazy" alt="Наши изделия.">
+            </picture>
+          </li>
+        </ul>
+        <div class="swiper-button-next"></div>
+      </div>
     </section>
     <section class="brand">
       <div class="brand__wrapper container">
@@ -111,6 +132,8 @@
     </div>
   </footer>
 
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

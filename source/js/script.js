@@ -48,39 +48,41 @@ if (window.innerWidth < 1025) {
   });
 }
 
-let swiper = new Swiper(".advantage__slider", {
-  // direction: 'vertical',
-  autoplay: true,
-  slidesPerView: 1,
-  spaceBetween: 36,
-  speed: 1000,
+function advantage() {
+  let swiper = new Swiper(".advantage__slider", {
+    // direction: 'vertical',
+    autoplay: true,
+    slidesPerView: 1,
+    spaceBetween: 36,
+    speed: 1000,
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+    },
+  });
+}
+advantage();
+
+
+let swiper = new Swiper(".image-slider", {
   loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'bullets',
+  speed: 300,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
+  breakpoints: {
+    760: {
+      slidesPerView: 3,
+      spaceBetween: 48,
+    },
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 36,
+    },
+  }
 });
-
-
-
-// var swiper = new Swiper(".main-slider", {
-//   loop: true,
-//   speed: 200,
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-//   breakpoints: {
-//     760: {
-//       slidesPerView: 4,
-//       spaceBetween: 40,
-//     },
-//     320: {
-//       slidesPerView: 2,
-//       spaceBetween: 20,
-//     },
-//   }
-// });
 
 
 

@@ -1,4 +1,36 @@
 .image-slider {
   background-color: $white;
   padding: $padding-white 0;
+
+  @include laptop {
+    padding: 96px 0;
+  }
+}
+
+.image-slider-list {
+  margin-left: 96px;
+
+  @include laptop {
+    margin-left: 288px;
+  }
+}
+
+.swiper-button-next {
+  right: 40px;
+  background-color: $white;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+
+  @include laptop {
+    right: 70px;
+  }
+
+  &::after {
+    content: '';
+    background-image: url(../img/arrow.svg);
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 8px;
+  }
 }
