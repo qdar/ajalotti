@@ -115,11 +115,13 @@ let elem = document.querySelector('header');
 document.addEventListener("DOMContentLoaded", function() {
   setTimeout(() => {
     elem.classList.add("header--label");
-  }, 900);
+  }, 700);
 });
 
 document.addEventListener("scroll", () => {
-  elem.classList.remove("header--label");
+  setTimeout(() => {
+    elem.classList.remove("header--label");
+  }, 300);
   document.cookie = "isee=agree; max-age=172800";
 });
 

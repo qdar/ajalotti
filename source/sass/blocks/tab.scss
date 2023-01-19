@@ -1,9 +1,16 @@
+.tab {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .tab__button {
   text-align: left;
   font-size: 20px;
   position: relative;
   cursor: pointer;
   color: $bace-color;
+  padding-right: 32px;
 
   &::after {
     content: '';

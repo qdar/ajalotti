@@ -25,6 +25,10 @@
   }
 }
 
+.cart__list {
+  margin-bottom: 36px;
+}
+
 .cart__item {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -81,8 +85,4 @@
   justify-self: flex-end;
   transform: rotate(45deg);
   cursor: pointer;
-}
-
-.cart__total {
-  margin-top: 36px;
 }
