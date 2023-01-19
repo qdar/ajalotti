@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }, 900);
 });
 
-elem.addEventListener("mouseout", function() {
+document.addEventListener("scroll", () => {
   elem.classList.remove("header--label");
   document.cookie = "isee=agree; max-age=172800";
 });
