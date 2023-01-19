@@ -1,9 +1,35 @@
 .advantage {
-  display: flex;
-  align-items: center;
-  min-height: 600px;
+  // display: flex;
+  // align-items: center;
+  // min-height: 600px;
+  margin-top: $padding-mobile;
+  margin-bottom: $padding-mobile;
 
   @include laptop {
-    min-height: 720px;
+    margin-top: $padding-pc;
+    margin-bottom: $padding-pc;
   }
+}
+
+.advantage__slider {
+  padding-top: $padding-mobile;
+  padding-bottom: $padding-mobile;
+}
+
+.advantage__slider .swiper-slide .slider__logo,
+.advantage__slider .swiper-slide .slider__title,
+.advantage__slider .swiper-slide .slider__caption {
+  opacity: 0;
+  transform: translate(0, 5px);
+  transition-delay: 0.6s;
+  transition-property: opacity, transform;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.4s;
+}
+
+.advantage__slider .swiper-slide-active .slider__logo,
+.advantage__slider .swiper-slide-active .slider__title,
+.advantage__slider .swiper-slide-active .slider__caption {
+  opacity: 1;
+  transform: translate(0, 0);
 }

@@ -21,6 +21,69 @@ for (i = 0; i < acc.length; i++) {
 }
 
 
+if (window.innerWidth <= 767) {
+  let swiper = new Swiper(".slider-banner", {
+    // autoplay: true,
+    slidesPerView: 1,
+    spaceBetween: 36,
+    speed: 500,
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+    },
+  });
+}
+
+if (window.innerWidth < 1025) {
+  let swiper = new Swiper(".product-slider", {
+    slidesPerView: 1,
+    spaceBetween: 36,
+    speed: 500,
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+    },
+  });
+}
+
+let swiper = new Swiper(".advantage__slider", {
+  // direction: 'vertical',
+  autoplay: true,
+  slidesPerView: 1,
+  spaceBetween: 36,
+  speed: 1000,
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+  },
+});
+
+
+
+// var swiper = new Swiper(".main-slider", {
+//   loop: true,
+//   speed: 200,
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+//   breakpoints: {
+//     760: {
+//       slidesPerView: 4,
+//       spaceBetween: 40,
+//     },
+//     320: {
+//       slidesPerView: 2,
+//       spaceBetween: 20,
+//     },
+//   }
+// });
+
+
+
 function getCookie(name) {
   var cookie = " " + document.cookie;
   var search = " " + name + "=";

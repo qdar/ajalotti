@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Товар</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -43,11 +44,19 @@
   <main class="product-page">
     <section class="product">
       <div class="product__wrapper container">
-        <div class="product__image slider">
-          <div class="slider__item">
-            <img src="../img/P1010148.png" alt="">
-            <img src="../img/P1010148.png" alt="">
+        <div class="product__image product-slider slider swiper">
+          <div class="swiper-wrapper">
+            <div class="slider__item swiper-slide">
+              <img src="../img/P1010148.png" alt="">
+            </div>
+            <div class="slider__item swiper-slide">
+              <img src="../img/P1010148.png" alt="">
+            </div>
+            <div class="slider__item swiper-slide">
+              <img src="../img/P1010148.png" alt="">
+            </div>
           </div>
+          <div class="swiper-pagination"></div>
         </div>
         <div class="product__info">
           <div class="product__name">
@@ -242,6 +251,7 @@
 
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/sticky-sidebar.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <script src="js/script.js"></script>
   <script>
     $(document).ready(function() {

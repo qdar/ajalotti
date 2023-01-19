@@ -1,3 +1,11 @@
+.banner {
+  &__item:nth-child(2) {
+    @include mobile-only {
+      order: 2;
+    }
+  }
+}
+
 .banner__link .banner__label span {
   display: inline-grid;
 

@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AJ Alotti — Сумки и аксессуары из кожи</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/icon.svg" type="image/svg+xml">
@@ -49,51 +50,68 @@
     <h1 class="visually-hidden">Aj Alotti — бренд нейтральных аксессуаров из кожи</h1>
     <section class="hero">
       <h2 class="visually-hidden">Новинки в aj alotti</h2>
-      <div class="hero__wrapper container">
-        <ul class="hero__slider clear-list slider banner">
-          <li class="slider__item banner__item">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="img/banner01.jpg 1x, img/banner01@2x.jpg 2x">
-              <img class="slider__image" src="img/banner01.jpg" width="343" alt="">
-            </picture>
-            <p class="banner__label">
-              <span>На первую покупку — 15%</span>
-            </p>
-          </li>
-          <li class="slider__item banner__item hero__circle">
-            <a class="slider__link banner__link" href="#">
+
+      <div class="hero__wrapper container hero__circle">
+        <div class="swiper slider slider-banner">
+          <ul class="hero__slider clear-list banner swiper-wrapper">
+            <li class="slider__item banner__item swiper-slide">
               <picture>
-                <source media="(min-width: 1200px)" srcset="img/banner02.jpg 1x, img/banner02@2x.jpg 2x">
-                <img class="slider__image" src="img/banner02.jpg" width="538" alt="">
+                <source type="image/webp" srcset="img/banner01.webp 1x, img/banner01@2x.webp 2x">
+                <img class="slider__image" src="img/banner01.jpg" srcset="img/banner01@2x.jpg 2x" width="343" alt="">
               </picture>
               <p class="banner__label">
-                <span>Model 008</span>
+                <span>На первую покупку — 15%</span>
               </p>
-            </a>
-          </li>
-          <li class="slider__item banner__item slider__item--end">
-            <a class="slider__link banner__link" href="#">
-              <picture>
-                <source media="(min-width: 1200px)" srcset="img/banner03.jpg 1x, img/banner03@2x.jpg 2x">
-                <img class="slider__image" src="img/banner03.jpg" width="343" alt="">
-              </picture>
-              <p class="banner__label">
-                <span>New! Model 007</span>
-              </p>
-            </a>
-          </li>
-        </ul>
+            </li>
+            <li class="slider__item banner__item hero__circle--slide swiper-slide">
+              <a class="slider__link banner__link" href="#">
+                <picture>
+                  <source type="image/webp" srcset="img/banner02.webp 1x, img/banner02@2x.webp 2x">
+                  <img class="slider__image" src="img/banner02.jpg" srcset="img/banner02@2x.jpg 2x" width="538" alt="">
+                </picture>
+                <p class="banner__label">
+                  <span>Model 008</span>
+                </p>
+              </a>
+            </li>
+            <li class="slider__item banner__item slider__item--end swiper-slide">
+              <a class="slider__link banner__link" href="#">
+                <picture>
+                  <source type="image/webp" srcset="img/banner03.webp 1x, img/banner03@2x.webp 2x">
+                  <img class="slider__image" src="img/banner03.jpg" srcset="img/banner03@2x.jpg 2x" width="343" alt="">
+                </picture>
+                <p class="banner__label">
+                  <span>New! Model 007</span>
+                </p>
+              </a>
+            </li>
+          </ul>
+          <div class="swiper-pagination"></div>
+        </div>
       </div>
     </section>
     <section class="advantage">
       <div class="advantage__wrapper container">
-        <ul class="advantage__slider clear-list slider">
-          <li class="slider__item slider__item--center">
-            <img src="img/logo.svg" width="84" height="16" alt="Локальный бренд">
-            <h2 class="slider__title headline headline--big">Локальный бренд</h2>
-            <p class="slider__caption headline">Гендерно-нейтральных аксессуаров из кожи</p>
-          </li>
-        </ul>
+        <div class="advantage__slider swiper">
+          <ul class="clear-list slider swiper-wrapper">
+            <li class="slider__item slider__item--center swiper-slide">
+              <img class="slider__logo" src="img/logo.svg" width="84" height="16" alt="Локальный бренд">
+              <h2 class="slider__title headline headline--big">Локальный бренд</h2>
+              <p class="slider__caption headline">Гендерно-нейтральных аксессуаров из кожи</p>
+            </li>
+            <li class="slider__item slider__item--center swiper-slide">
+              <img class="slider__logo" src="img/logo.svg" width="84" height="16" alt="Локальный бренд">
+              <h2 class="slider__title headline headline--big">Отбор сырья</h2>
+              <p class="slider__caption headline">Кожа приходит с лучших фабрик Италии</p>
+            </li>
+            <li class="slider__item slider__item--center swiper-slide">
+              <img class="slider__logo" src="img/logo.svg" width="84" height="16" alt="Локальный бренд">
+              <h2 class="slider__title headline headline--big">Контроль качества</h2>
+              <p class="slider__caption headline">За каждым изделием следит технолог, мастер и основатели бренда</p>
+            </li>
+          </ul>
+          <div class="swiper-pagination"></div>
+        </div>
       </div>
     </section>
     <section class="favorites">
@@ -293,6 +311,8 @@
     </div>
   </footer>
 
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

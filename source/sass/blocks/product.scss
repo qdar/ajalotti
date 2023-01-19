@@ -26,12 +26,12 @@
   }
 }
 
-.product__image {
-  @include tablet-only {
-    display: flex;
-    justify-content: center;
-  }
-}
+// .product__image {
+//   @include tablet-only {
+//     display: flex;
+//     justify-content: center;
+//   }
+// }
 
 .product__info {
   margin-top: 48px;
