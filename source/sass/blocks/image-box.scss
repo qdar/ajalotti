@@ -10,8 +10,9 @@
 
   &::before {
     content: '';
-    background-image: url(../img/circle2.svg);
+    background: var(--icon);
     background-size: cover;
+    transform: rotate(45deg);
     width: 92px;
     height: 90px;
     position: absolute;
