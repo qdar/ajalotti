@@ -1,6 +1,10 @@
 .slider__caption {
   color: $accent-color;
   text-align: center;
+
+  @include mobile-only {
+    max-width: 300px;
+  }
 }
 
 .slider-banner .slider__item {

@@ -2,12 +2,17 @@
   background-color: $white;
   padding: $padding-white 0;
 
+  &:hover .image-slider__next {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
   @include laptop {
     padding: 96px 0;
   }
 }
 
-.image-slider-list {
+.image-slider__list {
   margin-left: 96px;
 
   @include laptop {
@@ -15,12 +20,15 @@
   }
 }
 
-.swiper-button-next {
+.image-slider__next {
   right: 40px;
   background-color: $white;
   border-radius: 50%;
   width: 44px;
   height: 44px;
+  opacity: 0;
+  transform: translate(10px, 0);
+  transition: $transition;
 
   @include laptop {
     right: 70px;

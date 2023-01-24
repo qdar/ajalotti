@@ -23,11 +23,10 @@ for (i = 0; i < acc.length; i++) {
 
 if (window.innerWidth <= 767) {
   let swiper = new Swiper(".slider-banner", {
-    // autoplay: true,
     slidesPerView: 1,
     spaceBetween: 36,
     speed: 500,
-    loop: true,
+    loop: false,
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
